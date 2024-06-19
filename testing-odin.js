@@ -16,6 +16,9 @@ const calculator = {
   divide(x, y) {
     return x / y;
   },
+  multiply(e, f) {
+    return e * f;
+  },
 };
 
 export { capitalize, reverseString, calculator };
