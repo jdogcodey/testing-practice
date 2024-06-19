@@ -15,3 +15,7 @@ test("calculator add", () => {
 test("calculator subtract", () => {
   expect(calculator.subtract(24, 3)).toBe(21);
 });
+
+test("calculator divide", () => {
+  expect(calculator.divide(56, 8)).toBe(7);
+});
