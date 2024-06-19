@@ -10,6 +10,9 @@ const calculator = {
   add(x, y) {
     return x + y;
   },
+  subtract(a, b) {
+    return a - b;
+  },
 };
 
 export { capitalize, reverseString, calculator };
