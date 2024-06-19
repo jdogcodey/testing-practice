@@ -7,11 +7,14 @@ function reverseString(string) {
 }
 
 const calculator = {
-  add(x, y) {
-    return x + y;
+  add(a, b) {
+    return a + b;
   },
-  subtract(a, b) {
-    return a - b;
+  subtract(c, d) {
+    return c - d;
+  },
+  divide(x, y) {
+    return x / y;
   },
 };
 
