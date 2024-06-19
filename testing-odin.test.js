@@ -23,3 +23,15 @@ test("calculator divide", () => {
 test("calculator multiply", () => {
   expect(calculator.multiply(13, 4)).toBe(52);
 });
+
+test("caesar wrap", () => {
+  expect(caesarCipher("xyz", 3)).toBe("abc");
+});
+
+test("caesar case preservation", () => {
+  expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+});
+
+test("caesar punctuation", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});
