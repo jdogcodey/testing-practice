@@ -7,3 +7,7 @@ test("capitalize function", () => {
 test("reverse string function", () => {
   expect(reverseString("reverse this string")).toBe("gnirts siht esrever");
 });
+
+test("calculator add", () => {
+  expect(calculator.add(17, 2)).toBe(19);
+});
