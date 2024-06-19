@@ -6,4 +6,10 @@ function reverseString(string) {
   return string.split("").reverse().join("");
 }
 
-export { capitalize, reverseString };
+const calculator = {
+  add(x, y) {
+    return x + y;
+  },
+};
+
+export { capitalize, reverseString, calculator };
