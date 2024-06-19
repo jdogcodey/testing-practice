@@ -11,3 +11,7 @@ test("reverse string function", () => {
 test("calculator add", () => {
   expect(calculator.add(17, 2)).toBe(19);
 });
+
+test("calculator subtract", () => {
+  expect(calculator.subtract(24, 3)).toBe(21);
+});
