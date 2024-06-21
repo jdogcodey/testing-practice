@@ -1,4 +1,9 @@
-import { capitalize, reverseString, calculator } from "./testing-odin.js";
+import {
+  capitalize,
+  reverseString,
+  calculator,
+  caesarCipher,
+} from "./testing-odin.js";
 
 test("capitalize function", () => {
   expect(capitalize("test")).toBe("Test");
