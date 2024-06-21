@@ -3,6 +3,7 @@ import {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray,
 } from "./testing-odin.js";
 
 test("capitalize function", () => {
@@ -39,4 +40,33 @@ test("caesar case preservation", () => {
 
 test("caesar punctuation", () => {
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});
+
+test("analyze example", () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toStrictEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
+});
+
+test("analyze my one", () => {
+  expect(analyzeArray([1])).toStrictEqual({
+    average: 1,
+    min: 1,
+    max: 1,
+    length: 1,
+  });
+});
+
+test("analyze some different numbers", () => {
+  expect(
+    analyzeArray([1, 14, 3, 5, 7, 4, 33, 56, 43, 23, 34, 87])
+  ).toStrictEqual({
+    average: 26,
+    min: 1,
+    max: 87,
+    length: 12,
+  });
 });

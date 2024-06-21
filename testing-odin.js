@@ -36,7 +36,6 @@ function caesarCipher(string, val) {
     } else if (122 >= thisASCII && thisASCII >= 97) {
       const lowerToConvertASCII = arrayFromString[i].charCodeAt();
       let newLowerASCII = lowerToConvertASCII + val;
-      console.log(recursiveConvert(newLowerASCII, 122, 97));
       arrayFromString[i] = String.fromCharCode(
         recursiveConvert(newLowerASCII, 122, 97)
       );
@@ -46,7 +45,6 @@ function caesarCipher(string, val) {
 }
 
 function recursiveConvert(initialVal, upperBound, lowerBound) {
-  console.log(initialVal);
   if (initialVal > upperBound) {
     return recursiveConvert(initialVal - 26, upperBound, lowerBound);
   } else if (initialVal < lowerBound) {
@@ -54,4 +52,17 @@ function recursiveConvert(initialVal, upperBound, lowerBound) {
   } else return initialVal;
 }
 
-export { capitalize, reverseString, calculator, caesarCipher };
+function analyzeArray(array) {
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total += array[i];
+  }
+  return {
+    average: Math.round(total / array.length),
+    min: Math.min(...array),
+    max: Math.max(...array),
+    length: array.length,
+  };
+}
+
+export { capitalize, reverseString, calculator, caesarCipher, analyzeArray };
